@@ -85,8 +85,7 @@ Tunnel adapter Teredo Tunneling Pseudo-Interface:
    Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
    DHCP Enabled. . . . . . . . . . . : No
    Autoconfiguration Enabled . . . . : Yes
-   IPv6 Address. . . . . . . . . . . : 2001:0:338c:24f4:4dc:4b85:3571:b311(Prefe
-rred)
+   IPv6 Address. . . . . . . . . . . : 2001:0:338c:24f4:4dc:4b85:3571:b311(Preferred)
    Link-local IPv6 Address . . . . . : fe80::4dc:4b85:3571:b311%5(Preferred)
    Default Gateway . . . . . . . . . : ::
    DHCPv6 IAID . . . . . . . . . . . : 134217728
@@ -96,6 +95,29 @@ rred)
 ```
 
 ## `ping`
+Ping is one of the primary tools for troubleshooting IP-level connectivity. Ping also allows the users to specify the size of packets to use (default is 32 bytes).
+
+If pinged by name, `ping` first attempts to resolve the name to an address through a DNS server, then attempts a local broadcast. 
+**Syntax for the ping command -** `ping xxx.xxx.xxx.xxx` where `xxx.xxx.xxx.xxx` is the target IP for pinging.
+
+Here's the output of a simple `ping` command in windows.
+```
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\Aurghya>ping 8.8.8.8
+
+Pinging 8.8.8.8 with 32 bytes of data:
+Reply from 8.8.8.8: bytes=32 time=57ms TTL=53
+Reply from 8.8.8.8: bytes=32 time=57ms TTL=53
+Reply from 8.8.8.8: bytes=32 time=57ms TTL=53
+Reply from 8.8.8.8: bytes=32 time=56ms TTL=53
+
+Ping statistics for 8.8.8.8:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 56ms, Maximum = 57ms, Average = 56ms
+```
 
 ## `tracert`
 
