@@ -120,6 +120,38 @@ Approximate round trip times in milli-seconds:
 ```
 
 ## `tracert`
+`tracert` is a route tracing utility that display a list of near-router side interfaces of the routers along the path between a source host and a destination. `tracert` uses the IP TTL field ICMP Echo Request and ICMP Time Exchange messeges to determine the path from a source to a destination through an IP internetwork.
+
+**Syntax for `tracert` command** is `tracert www.example.com` or `tracert xxx.xxx.xxx.xxx` where `xxx.xxx.xxx.xxx` is a valid IP address.
+
+**Sample output for the `tracert` command**
+```
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\Aurghya>tracert 8.8.8.8
+
+Tracing route to google-public-dns-a.google.com [8.8.8.8]
+over a maximum of 30 hops:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.0.1
+  2     3 ms     2 ms     1 ms  10.10.49.129
+  3     2 ms     1 ms    <1 ms  172.16.0.1
+  4     3 ms     3 ms     4 ms  static-189.112.142.202.sitibroadband.in [202.142.112.189]
+  5     3 ms     3 ms     3 ms  172.31.1.42
+  6     3 ms     3 ms     3 ms  172.31.1.77
+  7     2 ms     3 ms     2 ms  172.31.1.29
+  8     3 ms     3 ms     2 ms  172.31.1.57
+  9     2 ms     2 ms     2 ms  172.31.1.1
+ 10     2 ms     2 ms     1 ms  172.31.1.66
+ 11    65 ms    64 ms    64 ms  209.85.173.49
+ 12    64 ms    64 ms    64 ms  216.239.57.217
+ 13    64 ms    64 ms    65 ms  209.85.254.187
+ 14    64 ms    64 ms    64 ms  google-public-dns-a.google.com [8.8.8.8]
+
+Trace complete.
+
+```
 
 ## `pathping`
 
