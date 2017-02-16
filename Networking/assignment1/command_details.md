@@ -1,6 +1,7 @@
-# Details of Basic Commands in Networking
+<h1 align="center">Experiment 2</h1>
+<h2 align="center">Brief Details of Basic Commands in Networking</h2>
 
-## `ipconfig`
+## ipconfig
 **Command Details** - As per Microsoft's Documentation, `ipconfig` is a command-line tool that display's the current configuration of the installed IP stack on a network computer.
 
 The command can be used with the `\all` switch to display a details report of the configuration of all the interfaces, including any WAN miniports used for remote access or VPN.
@@ -94,7 +95,7 @@ Tunnel adapter Teredo Tunneling Pseudo-Interface:
    NetBIOS over Tcpip. . . . . . . . : Disabled
 ```
 
-## `ping`
+## ping
 **Command Details -** Ping is one of the primary tools for troubleshooting IP-level connectivity. Ping also allows the users to specify the size of packets to use (default is 32 bytes).
 
 If pinged by name, `ping` first attempts to resolve the name to an address through a DNS server, then attempts a local broadcast. 
@@ -133,7 +134,7 @@ Ping statistics for 139.59.39.34:
 Approximate round trip times in milli-seconds:
     Minimum = 34ms, Maximum = 35ms, Average = 34ms
 ```
-## `tracert`
+## tracert
 **Command Details -** `tracert` is a route tracing utility that display a list of near-router side interfaces of the routers along the path between a source host and a destination. `tracert` uses the IP TTL field ICMP Echo Request and ICMP Time Exchange messeges to determine the path from a source to a destination through an IP internetwork.
 
 **Syntax for `tracert` command** is `tracert www.example.com` or `tracert xxx.xxx.xxx.xxx` where `xxx.xxx.xxx.xxx` is a valid IP address.
@@ -167,7 +168,7 @@ Trace complete.
 
 ```
 
-## `pathping`
+## pathping
 **Command Details -** The `pathping` tool is also a route tracing tool that combines the features of `ping` and `tracert` with additional extra information that is different from those two tools. `pathping` sends packets to each router on the way to a final destinatin over a period of time, and then computes results based on the packets returned from each hop(node). Since `pathping` shows the degree of packet loss at any given router or link, it is possible to pinpoint which router or link is causing problems on the network. 
 
 **Syntax for `pathping`** is `pathping www.example.com` or `pathping xxx.xxx.xxx.xxx` where `xxx.xxx.xxx.xxx` is the target IP address.
@@ -228,7 +229,7 @@ Trace complete.
 
 ```
 
-## `nslookup`
+## nslookup
 **Command Details -** `nslookup` is a truobleshooting tool for DNS problems, such as host name resolution. `nslookup` uses the domain name devolution method. `nslookup`'s debug mode is useful for troubleshooting feature. We can set the local computer into debug mode by using `set debug` or `set d2` when in `nslookup` prompt. 
 
 **Syntax for `nslookup`** is `nslookup` for starting the prompt or `nslookup example.com` for direct resolution of `example.com`.
