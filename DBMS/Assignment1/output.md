@@ -1,5 +1,5 @@
-#Assignment 1
-## Question 1
+# Assignment 1
+### Question 1
 Create table hotel that contains all hotel details, hotel_no is the primary key.
 
 **Query:**
@@ -23,7 +23,7 @@ mysql> desc hotel;
 3 rows in set (0.00 sec)
 ```
 
-## Question 2
+### Question 2
 Create table room that contains all room details for a hotel. room_no and hotel_no are the primary keys.
 
 **Query:**
@@ -50,7 +50,7 @@ mysql> desc room;
 4 rows in set (0.00 sec)
 ```
 
-## Question 3
+### Question 3
 Create table booking that contains booking details for a guest. Primary keys are hotel_no, guest_no and date_from.
 
 **Query:**
@@ -79,7 +79,7 @@ mysql> desc booking;
 5 rows in set (0.00 sec)
 ```
 
-## Question 4
+### Question 4
 Create table guest that contains guest details. Primary key is guest_no.
 
 **Query:**
@@ -103,7 +103,7 @@ mysql> desc guest;
 3 rows in set (0.00 sec)
 ```
 
-## Question 5
+### Question 5
 Alter table hotel and add an attribute "status".
 
 **Query:**
@@ -124,7 +124,7 @@ mysql> desc hotel;
 4 rows in set (0.00 sec)
 ```
 
-## Question 6
+### Question 6
 Alter table guest and modify the size of guest name to 30.
 
 **Query:**
@@ -144,7 +144,7 @@ mysql> desc guest;
 3 rows in set (0.00 sec)
 ```
 
-## Question 7
+### Question 7
 Rename table hotel to cityhotel.
 
 **Query:**
@@ -165,7 +165,7 @@ mysql> desc cityhotel;
 4 rows in set (0.02 sec)
 ```
 
-## Question 8
+### Question 8
 Drop table room.
 
 **Query:**
@@ -199,7 +199,7 @@ mysql> show tables;
 3 rows in set (0.00 sec)
 ```
 
-## Question 9
+### Question 9
 Describe table hotel.
 
 **Query:**
@@ -211,8 +211,9 @@ DESC hotel;
 mysql> desc hotel;
 ERROR 1146 (42S02): Table 'college.hotel' doesn't exist
 ```
+The above error is because we renamed the table "hotel" to "cityhotel" in Question 7.
 
-## Question 10
+### Question 10
 Describe table guest.
 
 **Query:**
