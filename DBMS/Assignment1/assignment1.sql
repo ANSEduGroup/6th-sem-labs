@@ -45,7 +45,7 @@ ALTER TABLE guest MODIFY name VARCHAR(30);
 
 # Question 7
 
-RENAME hotel TO cityhotel;
+RENAME TABLE hotel TO cityhotel;
 
 # Question 8
 
