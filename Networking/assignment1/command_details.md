@@ -152,7 +152,7 @@ over a maximum of 30 hops:
   1    <1 ms    <1 ms    <1 ms  192.168.0.1
   2     3 ms     2 ms     1 ms  10.10.49.129
   3     2 ms     1 ms    <1 ms  172.16.0.1
-  4     3 ms     3 ms     4 ms  static-189.112.142.202.sitibroadband.in [202.142.112.189]
+  4     3 ms     3 ms     4 ms  static-189.112.142.202.sitibroadband.in[202.142.112.189]
   5     3 ms     3 ms     3 ms  172.31.1.42
   6     3 ms     3 ms     3 ms  172.31.1.77
   7     2 ms     3 ms     2 ms  172.31.1.29
@@ -205,7 +205,7 @@ Hop  RTT    Lost/Sent = Pct  Lost/Sent = Pct  Address
                                 0/ 100 =  0%   |
   3    1ms     0/ 100 =  0%     0/ 100 =  0%  172.16.0.1
                                 0/ 100 =  0%   |
-  4    3ms     0/ 100 =  0%     0/ 100 =  0%  static-189.112.142.202.sitibroadband.in [202.142.112.189]
+  4    3ms     0/ 100 =  0%     0/ 100 =  0%  static-189.112.142.202.sitibroadband.in[202.142.112.189]
                                 0/ 100 =  0%   |
   5    3ms     0/ 100 =  0%     0/ 100 =  0%  172.31.1.42
                                 0/ 100 =  0%   |
@@ -328,116 +328,31 @@ Name:    aurghyadip.me
 Address:  139.59.39.34
 ```
 
-**With `set d2`**
+
+## Conclusion
+The above commands are for Windows based platforms only. Although some commands are same like `ping` and `nslookup` for instance. The others do not share the same commands. The equivalent of `ipconfig` is `ifconfig` and there are some more powerful tools available such as **MTR** or **My tarceroute**. `mtr` is basically a combination of `ping`, `pathping` and `tracert`. It's a powerful tool when analyzing or troubleshooting a network.
+
+**Sample output for `mtr aurghyadip.me`**
 ```
-C:\Users\Aurghya>nslookup
-Default Server:  UnKnown
-Address:  172.16.0.1
-
-> set d2
-> aurghyadip.me
-Server:  UnKnown
-Address:  172.16.0.1
-
-------------
-SendRequest(), len 31
-    HEADER:
-        opcode = QUERY, id = 2, rcode = NOERROR
-        header flags:  query, want recursion
-        questions = 1,  answers = 0,  authority records = 0,  additional = 0
-
-    QUESTIONS:
-        aurghyadip.me, type = A, class = IN
-
-------------
-------------
-Got answer (249 bytes):
-    HEADER:
-        opcode = QUERY, id = 2, rcode = NOERROR
-        header flags:  response, want recursion, recursion avail.
-        questions = 1,  answers = 1,  authority records = 3,  additional = 6
-
-    QUESTIONS:
-        aurghyadip.me, type = A, class = IN
-    ANSWERS:
-    ->  aurghyadip.me
-        type = A, class = IN, dlen = 4
-        internet address = 139.59.39.34
-        ttl = 2243 (37 mins 23 secs)
-    AUTHORITY RECORDS:
-    ->  aurghyadip.me
-        type = NS, class = IN, dlen = 22
-        nameserver = ns3.digitalocean.com
-        ttl = 85043 (23 hours 37 mins 23 secs)
-    ->  aurghyadip.me
-        type = NS, class = IN, dlen = 6
-        nameserver = ns1.digitalocean.com
-        ttl = 85043 (23 hours 37 mins 23 secs)
-    ->  aurghyadip.me
-        type = NS, class = IN, dlen = 6
-        nameserver = ns2.digitalocean.com
-        ttl = 85043 (23 hours 37 mins 23 secs)
-    ADDITIONAL RECORDS:
-    ->  ns1.digitalocean.com
-        type = A, class = IN, dlen = 4
-        internet address = 173.245.58.51
-        ttl = 66032 (18 hours 20 mins 32 secs)
-    ->  ns1.digitalocean.com
-        type = AAAA, class = IN, dlen = 16
-        AAAA IPv6 address = 2400:cb00:2049:1::adf5:3a33
-        ttl = 66032 (18 hours 20 mins 32 secs)
-    ->  ns2.digitalocean.com
-        type = A, class = IN, dlen = 4
-        internet address = 173.245.59.41
-        ttl = 66032 (18 hours 20 mins 32 secs)
-    ->  ns2.digitalocean.com
-        type = AAAA, class = IN, dlen = 16
-        AAAA IPv6 address = 2400:cb00:2049:1::adf5:3b29
-        ttl = 66032 (18 hours 20 mins 32 secs)
-    ->  ns3.digitalocean.com
-        type = A, class = IN, dlen = 4
-        internet address = 198.41.222.173
-        ttl = 66032 (18 hours 20 mins 32 secs)
-    ->  ns3.digitalocean.com
-        type = AAAA, class = IN, dlen = 16
-        AAAA IPv6 address = 2400:cb00:2049:1::c629:dead
-        ttl = 66032 (18 hours 20 mins 32 secs)
-
-------------
-Non-authoritative answer:
-------------
-SendRequest(), len 31
-    HEADER:
-        opcode = QUERY, id = 3, rcode = NOERROR
-        header flags:  query, want recursion
-        questions = 1,  answers = 0,  authority records = 0,  additional = 0
-
-    QUESTIONS:
-        aurghyadip.me, type = AAAA, class = IN
-
-------------
-------------
-Got answer (98 bytes):
-    HEADER:
-        opcode = QUERY, id = 3, rcode = NOERROR
-        header flags:  response, want recursion, recursion avail.
-        questions = 1,  answers = 0,  authority records = 1,  additional = 0
-
-    QUESTIONS:
-        aurghyadip.me, type = AAAA, class = IN
-    AUTHORITY RECORDS:
-    ->  aurghyadip.me
-        type = SOA, class = IN, dlen = 55
-        ttl = 1318 (21 mins 58 secs)
-        primary name server = ns1.digitalocean.com
-        responsible mail addr = hostmaster.aurghyadip.me
-        serial  = 1485376409
-        refresh = 10800 (3 hours)
-        retry   = 3600 (1 hour)
-        expire  = 604800 (7 days)
-        default TTL = 1800 (30 mins)
-
-------------
-Name:    aurghyadip.me
-Address:  139.59.39.34
+                                 My traceroute  [v0.87]
+skysword (0.0.0.0)                                             Fri Feb 17 01:53:50 2017
+Keys:  Help   Display mode   Restart statistics   Order of fields   quit
+                                               Packets               Pings
+ Host                                        Loss%   Snt   Last   Avg  Best  Wrst StDev
+ 1. 192.168.0.1                               0.0%     2    0.2   0.2   0.2   0.2   0.0
+ 2. 10.10.49.129                              0.0%     2    2.8   2.5   2.3   2.8   0.0
+ 3. 172.16.0.1                                0.0%     2    1.6   1.4   1.2   1.6   0.0
+ 4. static-189.112.142.202.sitibroadband.in   0.0%     2    1.9   2.0   1.9   2.2   0.0
+ 5. 172.31.1.42                               0.0%     2    2.7   2.7   2.6   2.7   0.0
+ 6. 172.31.1.77                               0.0%     2    4.1   4.1   4.0   4.1   0.0
+ 7. 172.31.1.29                               0.0%     2    3.2   3.2   3.2   3.3   0.0
+ 8. 172.31.1.57                               0.0%     2    2.2   2.5   2.2   2.8   0.0
+ 9. 172.31.1.1                                0.0%     2    2.8   2.9   2.8   3.0   0.0
+10. 172.31.1.66                               0.0%     2    2.5   2.3   2.1   2.5   0.0
+11. 220.225.1.66                             50.0%     2   35.4  35.4  35.4  35.4   0.0
+12. ???
+13. 124.124.67.153                            0.0%     1   34.7  34.7  34.7  34.7   0.0
+14. ???
+15. 139.59.39.34                              0.0%     1   34.8  34.8  34.8  34.8   0.0
 ```
+Also, networking tools are not limited to these, the library of tools is ever growing and our fundamental target is to keep up with it and use as much of it as possible effectively.
