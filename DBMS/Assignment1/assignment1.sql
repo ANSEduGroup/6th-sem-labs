@@ -46,6 +46,8 @@ ALTER TABLE guest MODIFY name VARCHAR(30);
 # Question 7
 
 RENAME TABLE hotel TO cityhotel;
+# This is basically same as ALTER TABLE hotel RENAME cityhotel;
+# Or more generally ALTER TABLE old_table_name RENAME new_table_name;
 
 # Question 8
 
