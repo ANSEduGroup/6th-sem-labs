@@ -149,7 +149,7 @@ Rename table hotel to cityhotel.
 
 **Query:**
 ```sql
-RENAME hotel TO cityhotel;
+RENAME TABLE hotel TO cityhotel;
 ```
 **Output:**
 ```
