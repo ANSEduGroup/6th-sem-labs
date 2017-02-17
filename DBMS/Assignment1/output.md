@@ -1,3 +1,4 @@
+#Assignment 1
 ## Question 1
 Create table hotel that contains all hotel details, hotel_no is the primary key.
 
