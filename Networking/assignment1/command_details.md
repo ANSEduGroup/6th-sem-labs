@@ -330,7 +330,7 @@ Address:  139.59.39.34
 
 
 ## Conclusion
-The above commands are for Windows based platforms only. Although some commands are same like `ping` and `nslookup` for instance. The others do not share the same commands. The equivalent of `ipconfig` is `ifconfig` and there are some more powerful tools available such as **MTR** or **My tarceroute**. `mtr` is basically a combination of `ping`, `pathping` and `tracert`. It's a powerful tool when analyzing or troubleshooting a network.
+The above commands are for Windows based platforms only. For linux, although some commands are same like `ping` and `nslookup`, but the others do not share the same commands. The equivalent of `ipconfig` is `ifconfig` and there are some more powerful tools available such as **MTR** or **My tarceroute**. `mtr` is basically a combination of `ping`, `pathping` and `tracert`. It's a powerful tool when analyzing or troubleshooting a network.
 
 **Sample output for `mtr aurghyadip.me`**
 ```
