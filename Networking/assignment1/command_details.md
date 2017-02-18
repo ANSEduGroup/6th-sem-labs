@@ -1,4 +1,4 @@
-<h1 align="center">Experiment 2</h1>
+<h1 align="center">Assignment 2</h1>
 <h2 align="center">Brief Details of Basic Commands in Networking</h2>
 
 ## ipconfig
