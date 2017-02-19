@@ -31,8 +31,8 @@ INSERT INTO booking (room_no, hotel_no, guest_no, date_from, date_to) VALUES
 
 # Insert into guest
 
-INSERT INTO guest (guest_no, name, address) VALUES
-  ('G1', 'RAM', 'MUMBAI'),
+INSERT INTO guest (guest_no, name, address) 
+VALUES ('G1', 'RAM', 'MUMBAI'),
   ('G2', 'SHYAM', 'KOLKATA'),
   ('G3', 'JADU', 'KOLKATA'),
   ('G4', 'MADHU', 'KOLKATA'),
