@@ -1,6 +1,6 @@
 # Question 1
 
-CREATE TABLE hotel (
+CREATE TABLE hotel_006 (
   hotel_no VARCHAR(10) PRIMARY KEY,
   name VARCHAR(20),
   address VARCHAR(30)
@@ -8,7 +8,7 @@ CREATE TABLE hotel (
 
 # Question 2
 
-CREATE TABLE room (
+CREATE TABLE room_006 (
   room_no VARCHAR(10),
   hotel_no VARCHAR(10),
   type VARCHAR(10),
@@ -18,7 +18,7 @@ CREATE TABLE room (
 
 # Question 3
 
-CREATE TABLE booking (
+CREATE TABLE booking_006 (
   hotel_no VARCHAR(10),
   guest_no VARCHAR(10),
   date_from DATE,
@@ -29,34 +29,8 @@ CREATE TABLE booking (
 
 # Question 4
 
-CREATE TABLE guest (
+CREATE TABLE guest_006 (
   guest_no VARCHAR(10) PRIMARY KEY,
   name VARCHAR(30),
   address VARCHAR(30)
 );
-
-# Question 5
-
-ALTER TABLE hotel ADD (status VARCHAR(10));
-
-# Question 6
-
-ALTER TABLE guest MODIFY name VARCHAR(30);
-
-# Question 7
-
-RENAME TABLE hotel TO cityhotel;
-# This is basically same as ALTER TABLE hotel RENAME cityhotel;
-# Or more generally ALTER TABLE old_table_name RENAME new_table_name;
-
-# Question 8
-
-DROP TABLE room;
-
-# Question 9
-
-DESC hotel;
-
-# Question 10
-
-DESC guest;
