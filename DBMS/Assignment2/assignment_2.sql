@@ -1,3 +1,8 @@
+-- Show constraints
+select constraint_name, constraint_type, table_name from user_constraints;
+
+-- Assignment 2
+
 SELECT * FROM hotel_006
 WHERE address = 'KOLKATA';
 

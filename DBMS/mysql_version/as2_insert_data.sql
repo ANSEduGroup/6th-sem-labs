@@ -25,7 +25,7 @@ INSERT INTO hotel_006 (hotel_no, name, address) VALUES
 
 # Insert into room
 
-INSERT INTO room (room_no, hotel_no, type, price) VALUES
+INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES
    ('R1', 'H1', 'AC', '2000'),
    ('R2', 'H1', 'NONAC', '1000'),
    ('R1', 'H2', 'DELUX', '2500'),
@@ -38,7 +38,7 @@ INSERT INTO room (room_no, hotel_no, type, price) VALUES
 
 # Insert into guest
 
-INSERT INTO guest (guest_no, name, address) VALUES 
+INSERT INTO guest_006 (guest_no, name, address) VALUES 
    ('G1', 'RAJA', 'MUMBAI'),
    ('G2', 'SIMA', 'KOLKATA'), 
    ('G3', 'RAHUL', 'KOLKATA'), 
@@ -51,7 +51,7 @@ INSERT INTO guest (guest_no, name, address) VALUES
 
 # Insert into booking
 
-INSERT INTO booking (room_no, hotel_no, guest_no, date_from, date_to) VALUES
+INSERT INTO booking_006 (room_no, hotel_no, guest_no, date_from, date_to) VALUES
   ('R1','H1', 'G1', '2016-01-01','2016-01-08'),
   ('R2', 'H1', 'G2', '2016-01-12', '2016-01-18'),
   ('R1','H2', 'G3', '2016-01-01', '2016-01-08'),

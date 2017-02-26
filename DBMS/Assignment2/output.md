@@ -1,4 +1,24 @@
 # Assignment 2
+### Constraints
+
+**Query**
+```sql
+SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME FROM USER_CONSTRAINTS
+```
+**Output**
+```
+CONSTRAINT_NAME                C TABLE_NAME
+------------------------------ - ------------------------------
+SYS_C007056                    P HOTEL_006
+SYS_C007057                    P ROOM_006
+SYS_C007058                    P BOOKING_006
+SYS_C007059                    P GUEST_006
+HOTEL_KEY                      R ROOM_006
+ROOM_KEY                       R BOOKING_006
+GUEST_KEY                      R BOOKING_006
+```
+
+
 ### Question 1
 List all the hotels in Kolkata.
 
