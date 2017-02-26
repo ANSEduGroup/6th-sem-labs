@@ -4,7 +4,7 @@
 ## ipconfig
 **Command Details** - As per Microsoft's Documentation, `ipconfig` is a command-line tool that display's the current configuration of the installed IP stack on a network computer.
 
-The command can be used with the `\all` switch to display a details report of the configuration of all the interfaces, including any WAN miniports used for remote access or VPN.
+The command can be used with the `/all` switch to display a details report of the configuration of all the interfaces, including any WAN miniports used for remote access or VPN.
 
 **Output of the command `ipconfig`:**
 ```
@@ -37,7 +37,7 @@ Tunnel adapter Teredo Tunneling Pseudo-Interface:
    Default Gateway . . . . . . . . . : ::
 ```
 
-**Output of the command `ipconfig \all`:**
+**Output of the command `ipconfig /all`:**
 ```
 C:\Users\Aurghya>ipconfig /all
 
