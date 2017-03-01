@@ -1,8 +1,21 @@
 <h1 align="center">Assignment 3</h1>
 <h2 align="center">Simple TCP Server and Client using Java</h2>
 
-## Algorithm
+### Aim
 
+### Abstract
+
+### Algorithm
+1. Create two programs, one for server side (TCPServer.java) and another for client side (TCPClient.java).
+2. In the server side, create a server socket.
+3. Create a socket and accept the connection of client.
+4. Create the object of **`DataInputStream`** or **`BufferedReader`** to accept input from client.
+5. Display the input received from the client.
+6. In the client side, create a socket to connect to the server.
+7. Create the object of **`BufferedReader`** to accept **`inFromServer`**.
+8. Create the object of **`DataOutputStream`** to send data to server.
+9. Display the input received from the server.
+10. Close the socket connection.
 
 ### TCP Server
 
@@ -69,3 +82,6 @@ class TCPClient {
 	}
 }
 ```
+### Output
+
+<img src="../assets/as3/clientserver.png">
