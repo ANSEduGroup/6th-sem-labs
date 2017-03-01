@@ -29,7 +29,8 @@ CREATE TABLE booking_006 (
 CREATE TABLE guest_006 (
   guest_no VARCHAR2(10) PRIMARY KEY,
   name VARCHAR2(30),
-  address VARCHAR2(30)
+  address VARCHAR2(30),
+  age NUMBER(10)
 );
 
 ALTER TABLE hotel_006 ADD (status VARCHAR(10));

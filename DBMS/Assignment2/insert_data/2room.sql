@@ -1,9 +1,9 @@
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R1', 'H1', 'AC', '2000');
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R2', 'H1', 'NONAC', '1000');
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R1', 'H2', 'DELUX', '2500');
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R2', 'H2', 'NONAC', '1000');
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R3', 'H4', 'AC', '1800');
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R4', 'H5', 'DELUX', '4000');
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R2', 'H3', 'AC', '3900');
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R1', 'H6', 'AC', '4000');
-INSERT INTO room_006 (room_no, hotel_no, type, price) VALUES ('R2', 'H6', 'NONAC', '1500');
+INSERT INTO ROOM_006 VALUES ('R1','H1','AC',2000);
+INSERT INTO ROOM_006 VALUES ('R2','H1','NONAC',1000);
+INSERT INTO ROOM_006 VALUES ('R1','H2','DELUX',2500);
+INSERT INTO ROOM_006 VALUES ('R2','H2','NONAC',1000);
+INSERT INTO ROOM_006 VALUES ('R3','H4','AC',1800);
+INSERT INTO ROOM_006 VALUES ('R4','H5','DELUX',3000);
+INSERT INTO ROOM_006 VALUES ('R2','H3','AC',2900);
+INSERT INTO ROOM_006 VALUES ('R1','H6','AC',3500);
+INSERT INTO ROOM_006 VALUES ('R5','H7','NONAC',900);

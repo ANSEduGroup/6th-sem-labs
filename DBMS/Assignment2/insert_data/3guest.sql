@@ -1,9 +1,9 @@
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G1', 'RAM', 'MUMBAI');
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G2', 'SIMA', 'KOLKATA');
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G3', 'RAHUL', 'KOLKATA');
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G4', 'MILI', 'KOLKATA');
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G5', 'SMITH', 'CHENNAI');
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G6', 'JONES', 'CHENNAI');
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G7', 'RIMI', 'KOLKATA');
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G8', 'REKHA', 'CHENNAI');
-INSERT INTO guest_006 (guest_no, name, address) VALUES ('G9', 'RISHI', 'PURI');
+INSERT INTO guest_006 VALUES ('G1', 'RAM', 'MUMBAI', '43');
+INSERT INTO guest_006 VALUES ('G2', 'SHYAM', 'KOLKATA', '32');
+INSERT INTO guest_006 VALUES ('G3', 'JADU', 'KOLKATA', '26');
+INSERT INTO guest_006 VALUES ('G4', 'MADHU', 'KOLKATA', '48');
+INSERT INTO guest_006 VALUES ('G5', 'SMITH', 'CHENNAI', '55');
+INSERT INTO guest_006 VALUES ('G6', 'JONES', 'CHENNAI', '39');
+INSERT INTO guest_006 VALUES ('G7', 'RIMI', 'KOLKATA', '38');
+INSERT INTO guest_006 VALUES ('G8', 'RAJA', 'PURI', '24');
+INSERT INTO guest_006 VALUES ('G9', 'SIMA', 'MUMBAI', '62');
