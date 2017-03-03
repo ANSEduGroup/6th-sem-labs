@@ -1,43 +1,48 @@
-# Aggregate Functions
-# How many hotels are there?
+# Find out the number of hotels
+select count(distinct hotel_no) from hotel_006;
 
-SELECT count(hotel_no) FROM hotel;
+# Average price of a room
+select avg(price) from room_006;
+# Grouped by hotel no
+# select hotel_no, avg(price) from room_006 GROUP BY hotel_no;
 
-# What is the average price of a room
+# No of different guests booked for january only
+select count(distinct guest_no) from booking_006 where month(date_from) = 1 and month(date_to) = 1;
 
-SELECT AVG(price) FROM room;
+# Room details for hotel ITC
+select room_no, type, price from room_006
+where hotel_no = (select hotel_no from hotel_006 where name = 'ITC');
 
-# How many different guests have made booking in JAN
+# List all the guest names of PURI Hotel
+select booking_006.room_no, guest_006.name from guest_006, hotel_006, booking_006
+where booking_006.hotel_no = hotel_006.hotel_no 
+and guest_006.guest_no = booking_006.guest_no
+and hotel_006.name = 'PURI';
 
-SELECT guest_no FROM booking
-WHERE MONTH(date_from) = 1;
+# List the hotel name where Jadu/Rahul Stays
+select * from booking_006, guest_006
+where booking_006.guest_no = guest_006.guest_no
+and guest_006.name = 'RAHUL';
 
-# Or this
+# List the guest names whose address and hotel address are same
+select guest_006.name from guest_006, booking_006, hotel_006
+where guest_006.guest_no = booking_006.guest_no
+and booking_006.hotel_no = hotel_006.hotel_no
+and guest_006.address = hotel_006.address;
 
-SELECT COUNT(DISTINCT guest_no) FROM booking
-WHERE MONTH(date_from) = 1;
+# List the number of rooms in each hotel
+select count(room_no), hotel_no, avg(price) FROM room_006 GROUP BY hotel_no;
 
-# Subquery and Join
+# List the number of rooms in each hotel in KOLKATA
+select count(room_no), room_006.hotel_no, avg(price) FROM room_006, hotel_006
+WHERE room_006.hotel_no = hotel_006.hotel_no
+and hotel_006.address = 'KOLKATA';
 
-# List the price and type of all room at the GRAND hotel.
+# Delete the booking details of the guest with guest with guest_no G4
+DELETE from booking_006 WHERE guest_no = 'G4';
 
-SELECT room_no, type, price FROM room WHERE hotel_no = (SELECT hotel_no FROM hotel WHERE name='GRAND');
+# Update hotel prices by 5%
+UPDATE room_006 set price = (price * 1.05);
 
-# List all guest names who booked PURI hotel
-
-SELECT name FROM guest WHERE guest_no = (
-  SELECT guest_no FROM booking WHERE hotel_no = (
-    SELECT hotel_no FROM hotel WHERE name = 'PURI'
-  )
-);
-
-# List hotels where Jadu stays
-
-SELECT hotel.hotel_no, hotel.name FROM hotel
-INNER JOIN (booking CROSS JOIN guest) ON (
-    booking.hotel_no = hotel.hotel_no
-    AND
-    booking.guest_no = guest.guest_no
-    AND
-    guest.name = 'JADU'
-);
+# Update the guest name to JISHU where the guest_no is G3
+update guest_006 set name = 'JISHU' where guest_no = 'G3';

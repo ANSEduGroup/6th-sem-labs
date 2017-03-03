@@ -1,6 +1,7 @@
-INSERT INTO hotel_006 (hotel_no, name, address) VALUES ('H1', 'PURI', 'PURI');
-INSERT INTO hotel_006 (hotel_no, name, address) VALUES ('H2','TAJ', 'MUMBAI');
-INSERT INTO hotel_006 (hotel_no, name, address) VALUES ('H3', 'SONALI', 'PURI');
-INSERT INTO hotel_006 (hotel_no, name, address) VALUES ('H4', 'ITC', 'KOLKATA');
-INSERT INTO hotel_006 (hotel_no, name, address) VALUES ('H5', 'PARK', 'CHENNAI');
-INSERT INTO hotel_006 (hotel_no, name, address) VALUES ('H6', 'SAMUDRA', 'CHENNAI');
+INSERT INTO HOTEL_006 VALUES ('H1','GRAND','KOLKATA');
+INSERT INTO HOTEL_006 VALUES ('H2','TAJ','MUMBAI');
+INSERT INTO HOTEL_006 VALUES ('H3','PURI','PURI');
+INSERT INTO HOTEL_006 VALUES ('H4','ITC','KOLKATA');
+INSERT INTO HOTEL_006 VALUES ('H5','PARK','CHENNAI');
+INSERT INTO HOTEL_006 VALUES ('H6','ITC','MUMBAI');
+INSERT INTO HOTEL_006 VALUES ('H7','SONALI','PURI');

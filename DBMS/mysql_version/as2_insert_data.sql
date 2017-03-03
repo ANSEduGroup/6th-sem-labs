@@ -1,5 +1,4 @@
 # Setting the foreign keys
-
 ALTER TABLE room_006
 ADD CONSTRAINT hotel_key
 FOREIGN KEY (hotel_no) REFERENCES hotel_006(hotel_no);
