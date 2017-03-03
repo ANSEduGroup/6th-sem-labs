@@ -20,7 +20,8 @@ CREATE TABLE room_028 (
 CREATE TABLE guest_028 (
   guest_no VARCHAR2(10) PRIMARY KEY,
   name VARCHAR2(30),
-  address VARCHAR2(30)
+  address VARCHAR2(30),
+  age NUMBER(10)
 );
 
 -- Create table booking
@@ -56,42 +57,42 @@ FOREIGN KEY (guest_no) REFERENCES guest_028(guest_no);
 -- Insert records in tables
 
 -- Insert into hotel
-INSERT INTO hotel_028 (hotel_no, name, address) VALUES ('H1', 'PURI', 'PURI');
-INSERT INTO hotel_028 (hotel_no, name, address) VALUES ('H2','TAJ', 'MUMBAI');
-INSERT INTO hotel_028 (hotel_no, name, address) VALUES ('H3', 'SONALI', 'PURI');
-INSERT INTO hotel_028 (hotel_no, name, address) VALUES ('H4', 'ITC', 'KOLKATA');
-INSERT INTO hotel_028 (hotel_no, name, address) VALUES ('H5', 'PARK', 'CHENNAI');
-INSERT INTO hotel_028 (hotel_no, name, address) VALUES ('H6', 'SAMUDRA', 'CHENNAI');
+INSERT INTO HOTEL_028 VALUES ('H1','GRAND','KOLKATA');
+INSERT INTO HOTEL_028 VALUES ('H2','TAJ','MUMBAI');
+INSERT INTO HOTEL_028 VALUES ('H3','PURI','PURI');
+INSERT INTO HOTEL_028 VALUES ('H4','ITC','KOLKATA');
+INSERT INTO HOTEL_028 VALUES ('H5','PARK','CHENNAI');
+INSERT INTO HOTEL_028 VALUES ('H6','ITC','MUMBAI');
+INSERT INTO HOTEL_028 VALUES ('H7','SONALI','PURI');
 
 -- Insert into room
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R1', 'H1', 'AC', '2000');
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R2', 'H1', 'NONAC', '1000');
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R1', 'H2', 'DELUX', '2500');
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R2', 'H2', 'NONAC', '1000');
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R3', 'H4', 'AC', '1800');
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R4', 'H5', 'DELUX', '4000');
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R2', 'H3', 'AC', '3900');
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R1', 'H6', 'AC', '4000');
-INSERT INTO room_028 (room_no, hotel_no, type, price) VALUES ('R2', 'H6', 'NONAC', '1500');
+INSERT INTO ROOM_028 VALUES ('R1','H1','AC',2000);
+INSERT INTO ROOM_028 VALUES ('R2','H1','NONAC',1000);
+INSERT INTO ROOM_028 VALUES ('R1','H2','DELUX',2500);
+INSERT INTO ROOM_028 VALUES ('R2','H2','NONAC',1000);
+INSERT INTO ROOM_028 VALUES ('R3','H4','AC',1800);
+INSERT INTO ROOM_028 VALUES ('R4','H5','DELUX',3000);
+INSERT INTO ROOM_028 VALUES ('R2','H3','AC',2900);
+INSERT INTO ROOM_028 VALUES ('R1','H6','AC',3500);
+INSERT INTO ROOM_028 VALUES ('R5','H7','NONAC',900);
 
 -- Insert into guest
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G1', 'RAM', 'MUMBAI');
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G2', 'SIMA', 'KOLKATA');
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G3', 'RAHUL', 'KOLKATA');
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G4', 'MILI', 'KOLKATA');
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G5', 'SMITH', 'CHENNAI');
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G6', 'JONES', 'CHENNAI');
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G7', 'RIMI', 'KOLKATA');
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G8', 'REKHA', 'CHENNAI');
-INSERT INTO guest_028 (guest_no, name, address) VALUES ('G9', 'RISHI', 'PURI');
+INSERT INTO guest_028 VALUES ('G1', 'RAM', 'MUMBAI', '43');
+INSERT INTO guest_028 VALUES ('G2', 'SHYAM', 'KOLKATA', '32');
+INSERT INTO guest_028 VALUES ('G3', 'JADU', 'KOLKATA', '26');
+INSERT INTO guest_028 VALUES ('G4', 'MADHU', 'KOLKATA', '48');
+INSERT INTO guest_028 VALUES ('G5', 'SMITH', 'CHENNAI', '55');
+INSERT INTO guest_028 VALUES ('G6', 'JONES', 'CHENNAI', '39');
+INSERT INTO guest_028 VALUES ('G7', 'RIMI', 'KOLKATA', '38');
+INSERT INTO guest_028 VALUES ('G8', 'RAJA', 'PURI', '24');
+INSERT INTO guest_028 VALUES ('G9', 'SIMA', 'MUMBAI', '62');
 
 -- Insert into booking
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R1','H1', 'G1', '01-JAN-2013','08-JAN-2013');
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R2', 'H1', 'G2', '12-JAN-2013', '18-JAN-2013');
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R1','H2', 'G3', '01-JAN-2013', '08-JAN-2013');
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R2', 'H2', 'G4', '18-JAN-2013', '28-JAN-2013');
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R3','H4', 'G5', '10-JAN-2013', '18-JAN-2013');
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R4', 'H5', 'G6', '11-JAN-2013', '18-JAN-2013');
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R2','H3', 'G7', '21-JAN-2013', '28-JAN-2013');
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R1','H6', 'G8', '12-JAN-2013', '20-JAN-2013');
-INSERT INTO booking_028 (room_no, hotel_no, guest_no, date_from, date_to) VALUES ('R2','H6', 'G9', '21-JAN-2013', '28-JAN-2013');
+INSERT INTO booking_028 VALUES ('R1','H1', 'G1', '01-JAN-2016','08-JAN-2016');
+INSERT INTO booking_028 VALUES ('R2', 'H1', 'G2', '12-JAN-2016', '18-JAN-2016');
+INSERT INTO booking_028 VALUES ('R1','H2', 'G3', '01-FEB-2016', '08-FEB-2016');
+INSERT INTO booking_028 VALUES ('R2', 'H2', 'G4', '18-JAN-2016', '28-JAN-2016');
+INSERT INTO booking_028 VALUES ('R3','H4', 'G5', '10-MAR-2016', '18-MAR-2016');
+INSERT INTO booking_028 VALUES ('R4', 'H5', 'G6', '11-JAN-2016', '18-JAN-2016');
+INSERT INTO booking_028 VALUES ('R2','H3', 'G7', '21-FEB-2016', '28-FEB-2016');
+INSERT INTO booking_028 VALUES ('R1','H6', 'G8', '22-FEB-2016', '27-FEB-2016');

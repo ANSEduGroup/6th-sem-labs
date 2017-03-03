@@ -11,6 +11,13 @@ select count(distinct guest_no) from booking_006
 where extract(month from date_from) = 1
 and extract(month from date_to) = 1;
 
+-- Average age of a guest
+select avg(age) from guest_006;
+
+select guest_006.name, guest_006.age from guest_006
+where guest_006.age = (select min(age) from guest_006)
+or guest_006.age = (select max(age) from guest_006);
+
 -- Room details for hotel ITC
 select room_no, type, price from room_006
 where hotel_no = (select hotel_no from hotel_006 where name = 'ITC');
@@ -24,7 +31,7 @@ and hotel_006.name = 'PURI';
 -- List the hotel name where Jadu/Rahul Stays
 select * from booking_006, guest_006
 where booking_006.guest_no = guest_006.guest_no
-and guest_006.name = 'RAHUL';
+and guest_006.name = 'JADU';
 
 -- List the guest names whose address and hotel address are same
 select guest_006.name from guest_006, booking_006, hotel_006
@@ -39,6 +46,15 @@ select count(room_no), hotel_no, avg(price) FROM room_006 GROUP BY hotel_no;
 select count(room_no), room_006.hotel_no, avg(price) FROM room_006, hotel_006
 WHERE room_006.hotel_no = hotel_006.hotel_no
 and hotel_006.address = 'KOLKATA';
+
+select count(room_006.room_no) as "Rooms", hotel_006.name FROM room_006, hotel_006
+WHERE room_006.hotel_no = hotel_006.hotel_no
+and hotel_006.address = 'KOLKATA' group by hotel_006.name;
+
+-- List the maximum price in each hotel
+select hotel_006.hotel_no, max(price) from room_006, hotel_006
+where room_006.hotel_no = hotel_006.hotel_no
+group by hotel_006.hotel_no order by hotel_006.hotel_no;
 
 -- Delete the booking details of the guest with guest with guest_no G4
 DELETE from booking_006 WHERE guest_no = 'G4';
