@@ -4,7 +4,7 @@
 
 ---
 
-### Assignment 1
+### Assignment 1 & 2
 #### Basic Details about Networking Devices and Commands
 
 - **Devices:** Repeater, Hub, Bridge, Switch, Router, Gateway
@@ -20,3 +20,8 @@
 	* Syntax
 	* Output
 
+### Assignment 3
+#### Simple TCP Server and Client Implementation using Java
+
+- **TCP Server**
+- **TCP Client**
