@@ -12,9 +12,13 @@
 ## Some useful information
 Assuming most of the people have mysql or mariadb installed in their system, here's how to run a `.sql` script in mysql or mariadb. I'm pretty sure it's similar in other DBMS-s also.
 Just execute this command when in mysql or mariadb console
-```
+```sql
 source <path_to_file>/filename.sql
 ```
+If you are using ORACLE SQL PLUS, use this
+```sql
+@<path_to_file>/filename.sql
+``` 
 This will execute (in top-down approach) all the queries you have written inside the `.sql` file in the database you have currently selected to use. You can also create and use databases using this method, but that is not recommended, as there might be some conflicting results.
 
 I have also created a trello board to track our progress throughout the semester.
