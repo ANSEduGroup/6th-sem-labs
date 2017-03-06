@@ -1,5 +1,5 @@
 -- Find out the number of hotels
-select count(distinct hotel_no) from hotel_006;
+select count(distinct hotel_no) as "Number of Hotels" from hotel_006;
 
 -- Average price of a room
 select avg(price) from room_006;
@@ -23,9 +23,9 @@ select guest_006.name, guest_006.age from guest_006
 where guest_006.age = (select min(age) from guest_006)
 or guest_006.age = (select max(age) from guest_006);
 
--- Room details for hotel ITC
+-- Room details for hotel GRAND
 select room_no, type, price from room_006
-where hotel_no = (select hotel_no from hotel_006 where name = 'ITC');
+where hotel_no = (select hotel_no from hotel_006 where name = 'GRAND');
 
 -- List all the guest names of PURI Hotel
 select booking_006.room_no, guest_006.name from guest_006, hotel_006, booking_006
@@ -33,13 +33,17 @@ where booking_006.hotel_no = hotel_006.hotel_no
 and guest_006.guest_no = booking_006.guest_no
 and hotel_006.name = 'PURI';
 
--- List the hotel name where Jadu/Rahul Stays
-select * from booking_006, guest_006
-where booking_006.guest_no = guest_006.guest_no
+-- List the hotel name where Jadu Stays
+select hotel_006.name as "Hotel Name", booking_006.room_no as "Room No"
+from booking_006, guest_006, hotel_006
+where booking_006.hotel_no = hotel_006.hotel_no
+and booking_006.guest_no = guest_006.guest_no
 and guest_006.name = 'JADU';
 
 -- List the guest names whose address and hotel address are same
-select guest_006.name from guest_006, booking_006, hotel_006
+select guest_006.name as "Guest Name", guest_006.address as "Guest Address",
+hotel_006.name as "Hotel Name", hotel_006.address as "Hotel Address"
+from guest_006, booking_006, hotel_006
 where guest_006.guest_no = booking_006.guest_no
 and booking_006.hotel_no = hotel_006.hotel_no
 and guest_006.address = hotel_006.address;
