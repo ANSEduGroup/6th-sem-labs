@@ -1,9 +1,12 @@
 <h1 align="center">Assignment 3</h1>
 <h2 align="center">Simple TCP Server and Client using Java</h2>
 
-### Aim
+### Aim : IMPLEMENTATION OF ECHO SERVER SOCKET USING TCP/IP
 
 ### Abstract
+- **TCP/IP** : TCP/IP (Transmission Control Protocol/Internet Protocol) is the basic communication protocool of the internet. It can also be used as a communication protocol in a private network. TCP/IP is a two layer program. The higher layer, TCP, manages the assembling of a message or file into smaller packets that are transmitted over the internet and received by a TCP layer that reassembles the packets into the original message. The lower layer IP, handles the address part of each packet so that it gets to the right destination. Each gateway computer on the network checks this address to see where to forward the message.
+- **ECHO Server** : An echo server is usually an application which is used to test if the connection between a client and a server is successful. It consists of a server which sends back whatever text the client sent.
+Our goal is to create an echo server which recieves the text from the client, capitalizes it and then sends it back to the client.
 
 ### Algorithm
 1. Create two programs, one for server side (TCPServer.java) and another for client side (TCPClient.java).
