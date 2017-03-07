@@ -6,3 +6,11 @@
 
 ### Assignment 2
 - Use of **SELECT** to get answers.
+
+### Assignment 3
+- GROUP BY
+- SUBQUERY & JOIN
+- ORDER BY
+- DML
+
+<img src = "schema.png">
