@@ -27,7 +27,7 @@ where name like '_O%' or
 name like '_H%';
 
 -- Select the guests whose name begins with 'J' and a 4 letter word
-select name from guest_006
+select * from guest_006
 where name like 'J___';
 
 -- Select the hotels whose address has 'R' as the 3rd character
