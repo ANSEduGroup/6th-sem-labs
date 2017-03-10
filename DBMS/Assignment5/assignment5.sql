@@ -56,9 +56,9 @@ WHERE DATE_FROM < (select DATE_FROM from BOOKING_006
 	where GUEST_NO = (SELECT GUEST_NO from GUEST_006
 		where NAME = 'MADHU'));
 
--- select hotel where address is equal to grand address
+-- select hotel where address is equal to ITC address
 select * from HOTEL_006
-where ADDRESS = (SELECT ADDRESS from HOTEL_006 WHERE name = 'GRAND');
+where ADDRESS in (SELECT ADDRESS from HOTEL_006 WHERE name = 'ITC');
 
 -- Guests who live where shyam lives
 select * from guest_006
