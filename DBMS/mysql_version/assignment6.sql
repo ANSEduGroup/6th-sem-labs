@@ -33,10 +33,10 @@ where
 		author_006.author_name = 'AJAY';
 
 -- 7 (not running for some reason)
-/*select * from author_006
+select * from author_006
 where price > (select max(avg(price))
 		from author_006 group by category);
-*/
+
 -- 8
 select
 	order_006.order_id,
