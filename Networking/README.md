@@ -25,3 +25,8 @@
 
 - **TCP Server**
 - **TCP Client**
+
+### Assignment 4
+#### Simple UDP Server and Client Implementation using Java
+- **UDP Server**
+- **UDP Client**
