@@ -6,10 +6,11 @@ class WriteServer {
 	public static int serverPort	= 1234;
 	public static int clientPort	= 1235;
 	public static int buffer_size	= 1024;
-	
+
 	public static DatagramSocket ds;
 	public static byte buffer[] = new byte[buffer_size];
 
+	// UDP Server Method
 	public static void TheServer() throws Exception {
 		int pos = 0;
 		while(true) {
@@ -30,6 +31,7 @@ class WriteServer {
 		}
 	}
 
+	// UDP Client Method
 	public static void TheClient() throws Exception {
 		while (true) {
 			DatagramPacket p = new DatagramPacket(buffer, buffer.length);
@@ -39,6 +41,8 @@ class WriteServer {
 	}
 
 	public static void main(String[] args) throws Exception {
+
+		// Checking to see what to start, server or client
 		if(args.length == 1) {
 			ds = new DatagramSocket(serverPort);
 			TheServer();
