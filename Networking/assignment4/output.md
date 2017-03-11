@@ -1,0 +1,85 @@
+<h1 align="center">Assignment 4</h1>
+<h2 align="center">Simple UDP Server and Client using Java</h2>
+
+### Aim : IMPLEMENTATION OF ECHO SERVER SOCKET USING UDP DATAGRAM
+
+### Abstract
+
+### Algorithm
+1. Create two programs, one for the server side (UDPServer.java) and another for the client side (UDPClient.java).
+2. Create an instance of `DatagramSocket` & `DatagramPacket` in the server side.
+3. Receive the packet from the client using `DatagramSocket`'s `receive` method.
+4. Get data from `DatagramSocket` using `getData()` and print it.
+5. Get the message using `getBytes()`.
+6. Send the packet to the client using `send()` method of `DatagramSocket`.
+7. Create instances of `DatagramSocket` and `DatagramPacket` in client side.
+8. Take keyboard input from user in the client side using `BufferedReader`.
+9. Send the message to the server using `send()` of `DatagramPacket`.
+10. Receive message from server using `DatagramSocket`'s `receive()` method.
+11. Print the message in the client side.
+12. Close the connection using `close()` method of `DatagramSocket`.
+
+### UDP Server
+
+```java
+import java.io.*;
+import java.net.*;
+
+class UDPServer {
+   public static void main(String args[]) throws IOException {
+
+      DatagramSocket serverSocket = new DatagramSocket(9876);
+      byte[] receiveData = new byte[1024];
+      byte[] sendData = new byte[1024];
+
+      while(true) {
+         DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+         serverSocket.receive(receivePacket);
+         String sentence = new String(receivePacket.getData());
+         System.out.println("RECEIVED: " + sentence);
+         InetAddress IPAddress = receivePacket.getAddress();
+         int port = receivePacket.getPort();
+         String capitalizedSentence = sentence.toUpperCase();
+         sendData = capitalizedSentence.getBytes();
+         DatagramPacket sendPacket =
+         new DatagramPacket(sendData, sendData.length, IPAddress, port);
+         serverSocket.send(sendPacket);
+      }
+   }
+}
+```
+
+### UDP Client
+
+```java
+import java.io.*;
+import java.net.*;
+
+class UDPClient {
+   public static void main(String args[]) throws Exception {
+
+      BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
+      DatagramSocket clientSocket = new DatagramSocket();
+      InetAddress IPAddress = InetAddress.getByName("localhost");
+      byte[] sendData = new byte[1024];
+      byte[] receiveData = new byte[1024];
+
+      String sentence = inFromUser.readLine();
+      sendData = sentence.getBytes();
+      DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 9876);
+
+      clientSocket.send(sendPacket);
+      DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+
+      clientSocket.receive(receivePacket);
+      String modifiedSentence = new String(receivePacket.getData());
+
+      System.out.println("SERVER SAYS:" + modifiedSentence);
+
+      clientSocket.close();
+   }
+}
+```
+### Output
+
+<img src="../assets/as3/udpclientserver.png">
