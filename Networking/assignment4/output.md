@@ -1,14 +1,6 @@
-<h1 align="center">Assignment 4</h1>
 <h2 align="center">Simple UDP Server and Client using Java</h2>
-
-### Aim : IMPLEMENTATION OF ECHO SERVER SOCKET USING UDP DATAGRAM
-
 ### Abstract
 - **UDP**: The User Datagram Protocol is the simpler of the two standards TCP/IP transport protocols. It is an end-to-end transport level protocol that adds only port addresses, checksum errors control, and length information to the data from the upper layer. The packet produced by the UDP is called a user datagram.
-
-|TCP|UDP|
-|---|---|
-|TCP is a connection oriented stream over an IP network. It guarantees that all sent packets will reach the destination in the correct order. This imply the use of acknowledgement packets sent back to the sender, and automatic retransmission, causing additional delays and a general less efficient transmission than UDP.|UDP is a connection-less protocol. Communication is datagram oriented. The integrity is guaranteed only on the single datagram. Datagrams reach destination and can arrive out of order or don't arrive at all. It is more efficient than TCP because it uses non ACK. It's generally used for real time communication, where a little percentage of packet loss rate is preferable to the overhead of a TCP connection.|
 
 - **ECHO Server** : An echo server is usually an application which is used to test if the connection between a client and a server is successful. It consists of a server which sends back whatever text the client sent.
 Our goal is to create an echo server which recieves the text from the client, capitalizes it and then sends it back to the client.
@@ -56,7 +48,7 @@ class UDPServer {
    }
 }
 ```
-
+<br><br><br>
 ### UDP Client
 
 ```java
