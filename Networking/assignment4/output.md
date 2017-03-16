@@ -1,9 +1,11 @@
 <h2 align="center">Simple UDP Server and Client using Java</h2>
+
+### AIM : IMPLEMENTATION OF UDP ECHO SERVER AND CLIENT
 ### Abstract
 - **UDP**: The User Datagram Protocol is the simpler of the two standards TCP/IP transport protocols. It is an end-to-end transport level protocol that adds only port addresses, checksum errors control, and length information to the data from the upper layer. The packet produced by the UDP is called a user datagram.
 
 - **ECHO Server** : An echo server is usually an application which is used to test if the connection between a client and a server is successful. It consists of a server which sends back whatever text the client sent.
-Our goal is to create an echo server which recieves the text from the client, capitalizes it and then sends it back to the client.
+Our goal is to create an echo server which receives the text from the client, capitalizes it and then sends it back to the client.
 
 ### Algorithm
 1. Create two programs, one for the server side (UDPServer.java) and another for the client side (UDPClient.java).
@@ -41,8 +43,7 @@ class UDPServer {
          int port = receivePacket.getPort();
          String capitalizedSentence = sentence.toUpperCase();
          sendData = capitalizedSentence.getBytes();
-         DatagramPacket sendPacket =
-         new DatagramPacket(sendData, sendData.length, IPAddress, port);
+         DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
          serverSocket.send(sendPacket);
       }
    }
@@ -83,4 +84,4 @@ class UDPClient {
 ### Output
 |UDP SERVER|UDP CLIENT|
 |----------|----------|
-|<img src="../assets/as4/UDPServer.png">|<img src="../assets/as4/UDPClient.png">
+|<img src="../assets/as4/UDPServer.png">|<img src="../assets/as4/UDPClient.png">|

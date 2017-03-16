@@ -1,6 +1,6 @@
 <h1 align="center">Assignment 4</h1>
 
-### Aim : IMPLEMENTATION OF ECHO SERVER SOCKET USING UDP
+### Difference Between TCP and UDP
 
 |Topic|TCP|UDP|
 |:-----:|:---|:---|
@@ -14,6 +14,5 @@
 |**Header Size**|TCP header size is 20 bytes.|UDP Header size is 8 bytes.|
 |**Streaming of Data**|Data is read as a byte stream, no distinguishing indications are transmitted to signal message bounderies.|Packets are sent individually and are checked for integrity only if they arrive.|
 |**Weight**|TCP is heavyweight. It requires three packets to set up a socket connection, before any user data can be sent.|UDP is lightweight. There is no ordering of messages, no tracking connections, etc. It is small transport layer designed on top of IP.|
-|**Data Flow Control**|TCP handles reliability and congestion control.|UDP does not have an option for flow control.|
-|**Error Checking**|TCP Does error checking and error recovery.|UDP does error checking but simply discards erroneous packets. Error recovery is not attempted.|
+|**Data Flow Control and Error Checking**|TCP handles reliability and congestion control. Also TCP Does error checking and error recovery.|UDP does not have an option for flow control. UDP does error checking but simply discards erroneous packets. Error recovery is not attempted.|
 |**Acknowledgement**|Yes, segments.|No|
