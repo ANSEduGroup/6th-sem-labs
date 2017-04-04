@@ -1,9 +1,6 @@
 import java.io.*;
 import java.net.*;
-/**
- *
- * @author lycog
- */
+
 public class MulticastReceiver {
   public static void main(String[] args) {
     DatagramPacket inPacket = null;
@@ -13,7 +10,7 @@ public class MulticastReceiver {
       MulticastSocket socket = new MulticastSocket(8888);
       InetAddress address = InetAddress.getByName("224.2.2.3");
       socket.joinGroup(address);
- 
+
       while (true) {
         inPacket = new DatagramPacket(inBuf, inBuf.length);
         socket.receive(inPacket);
