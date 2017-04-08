@@ -1,12 +1,3 @@
-/*
-    crc parity programm
-    this is sender
-    
-    
-    Generator is 1011
-
-
-*/
 import java.io.*;
 import java.net.*;
 public class Sender{
