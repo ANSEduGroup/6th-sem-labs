@@ -7,7 +7,8 @@ public class Sender{
      String message;
     boolean check=true;
     Sender(){}
-    void run()
+    
+	void run()
     {
         try{
             BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
