@@ -1,0 +1,92 @@
+\section{Assignment 2}
+
+\textbf{Create the following tables and insert the records in the tables
+as mentioned}
+
+\subsection{HOTEL}\label{header-c24}
+
+\begin{tabular}{|c|c|c|}
+\hline
+NAME & ADDRESS & HOTEL\_NO \\
+\hline
+GRAND & KOLKATA & H1 \\
+TAJ & MUMBAI & H2 \\
+PURI & PURI & H3 \\
+ITC & KOLKATA & H4 \\
+PARK & CHENNAI & H5 \\
+ITC & MUMBAI & H6 \\
+SONALI & PURI & H7 \\
+\hline
+\end{tabular}
+
+\subsection{ROOM}\label{header-c58}
+
+\begin{tabular}[]{|c|c|c|c|}
+\hline
+ROOM\_NO & HOTEL\_NO & TYPE & PRICE \\
+\hline
+R1 & H1 & AC & 2000 \\
+R2 & H1 & NONAC & 1000 \\
+R1 & H2 & DELUX & 2500 \\
+R2 & H2 & NONAC & 1000 \\
+R3 & H4 & AC & 1800 \\
+R4 & H5 & DELUX & 3000 \\
+R2 & H3 & AC & 2900 \\
+R1 & H6 & AC & 2500 \\
+R5 & H7 & NONAC & 900 \\
+\hline
+\end{tabular}
+
+\subsection{BOOKING}\label{header-c110}
+
+\begin{tabular}[]{|c|c|c|c|c|}
+\hline
+ROOM\_NO & HOTEL\_NO & GUEST\_NO & DATE\_FROM & DATE\_TO \\
+\hline
+R1 & H1 & G1 & 01-01-2016 & 08-01-2016 \\
+R2 & H1 & G2 & 12-01-2016 & 18-01-2016 \\
+R1 & H2 & G3 & 01-02-2016 & 08-02-2016 \\
+R2 & H2 & G4 & 18-01-2016 & 28-01-2016 \\
+R3 & H4 & G5 & 10-03-2016 & 18-03-2016 \\
+R4 & H5 & G6 & 11-01-2016 & 18-01-2016 \\
+R2 & H3 & G7 & 21-02-2016 & 28-02-2016 \\
+R1 & H6 & G8 & 22-02-2016 & 27-02-2016 \\
+\hline
+\end{tabular}
+
+\subsection{GUEST}\label{header-c167}
+
+\begin{tabular}[]{|c|c|c|c|}
+\hline
+GUEST\_NO & NAME & ADDRESS & AGE \\
+\hline
+G1 & RAM & MUMBAI & 43 \\
+G2 & SHYAM & KOLKATA & 32 \\
+G3 & JADU & KOLKATA & 26 \\
+G4 & MADHU & KOLKATA & 48 \\
+G5 & SMITH & CHENNAI & 55 \\
+G6 & JONES & CHENNAI & 39 \\
+G7 & RIMI & KOLKATA & 38 \\
+G8 & RAJA & PURI & 24 \\
+G9 & SIMA & MUMBAI & 62 \\
+\hline
+\end{tabular}
+
+\subsection{Questions}\label{header-c220}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  List all the hotels in KOLKATA.
+\item
+  List the room details of hotel H1.
+\item
+  List the guest names who live in CHENNAI.
+\item
+  List the guest\_no who stayed from 01-01-2016 to 08-01-2016.
+\item
+  List the room details whose price is \textgreater{} 2000 and
+  \textless{} 3000.
+\item
+  List the guest names whose age is less than 50 but more than 30.
+\end{enumerate}
