@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+
+\usepackage[left = .85in, right = .5in, top = 1in, bottom = 1in]{geometry}
+\usepackage{listings}
+
+\title{\Huge Assignment 8 \\
+	\Large Implementation of DLL Flow Control \\
+	Stop and Wait Protocol Using Java}
+
+
+\begin{document}
+\section{Abstract}
+\subsection{}
+\section{Algorithm}
+\subsection{Sender}
+\begin{enumerate}
+\item Create Socket to connect to server.
+\item Create object of ObjectOutputStream and ObjectInputStream to send and receive data from receiver.
+\item When frameNoCount < msgSize
+	\begin{enumerate}
+		\item Create packet of data length 1, including seqNo.
+		\item Write frame in invoking Stream.
+		\item Store frame and increase seqNo then send the frame.
+		\item Wait for acknowledgement. if(ack == seqNo), send next frame.
+		\item When frameNoCount = msgSize, end msg.
+		\item if(ack != seqNo), resend data.
+	\end{enumerate}
+\end{enumerate}
+\subsection(Receiver)
+\begin{enumerate}
+\item Create socket and objects of ObjectOutputStream and ObjectInputStream.
+\item Read frame from invoking stream.
+\item If sequence number of frame is 1 which is expected, frame is accepted and acknowledgement is sent to sender, else this is duplicate.  
+\end{enumerate}
+\end{document}
