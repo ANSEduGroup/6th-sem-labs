@@ -1,0 +1,17 @@
+initialize all var
+
+get the socket to send the string from server to receiver
+
+give the data as input
+
+the sliding window will send as many data as the sending window size to the receiver and wait for the acknowledgement
+
+once it receives the acknowledgement from the receiver it send the next set of data
+
+step three and 4 are repeeated as long as the input data is sent and acknowledgement is received 
+
+once it sends the 1st set of data it is ready to send the next input stream
+
+type quit to end the session
+
+stop the connection\
