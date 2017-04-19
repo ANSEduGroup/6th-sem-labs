@@ -6,7 +6,7 @@ public class SWSender {
 		int LAR = 0;
 		int LFS = 0;
 
-		ServerSocket ss = new ServerSocket(500);
+		ServerSocket ss = new ServerSocket(5050);
 		Socket s = ss.accept();
 
 		System.out.println("Type your msg ::: ");
@@ -33,7 +33,7 @@ public class SWSender {
 					if((LFS - LAR) <= SWS) {
 						p.println(c[i]);
 						LFS ++;
-						System.out.println("sent = " + c[i++] + "Successfully");
+									System.out.println("sent = " + c[i++] + "Successfully");
 					}
 				}
 				while(j < t.length() && j < SWS*sent) {
