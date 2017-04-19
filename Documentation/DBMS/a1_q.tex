@@ -1,0 +1,48 @@
+\section{Assignment 1}
+
+\subsection{Data Definition Language}
+
+\subsubsection{Table Details}
+
+\begin{itemize}
+\item
+  Hotel (hotel\_no(10, varchar), name(20, varchar), address(30,varchar))
+\item
+  Room (room\_no(10, varchar), hotel\_no(10, varchar), type(10,
+  varchar), price(20, number))
+\item
+  Booking (hotel\_no(10, varchar), guest\_no(10, varchar),
+  date\_from(date), date\_to(10), room\_no(10, varchar))
+\item
+  Guest (guest\_no(10, varchar), name(30, varchar), address(30,
+  varchar))
+\end{itemize}
+
+\subsubsection{Questions}
+
+\begin{enumerate}
+\item
+  Create table hotel that contains all hotel details, hotel\_no is the
+  primary key.
+\item
+  Create table room that contains all room details for a hotel. room\_no
+  and hotel\_no are the primary keys.
+\item
+  Create table booking that contains booking details for a guest.
+  Primary keys are hotel\_no, guest\_no and date\_from.
+\item
+  Create table guest that contains guest details. Primary key is
+  guest\_no.
+\item
+  Alter table hotel and add an attribute "status".
+\item
+  Alter table guest and modify the size of guest name to 30.
+\item
+  Rename table hotel to cityhotel.
+\item
+  Drop table room.
+\item
+  Describe table hotel.
+\item
+  Describe table guest.
+\end{enumerate}
