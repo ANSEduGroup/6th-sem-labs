@@ -1,0 +1,15 @@
+Create a class named GoBackN
+
+accept the window size as input
+
+build a frame dependent on the window size
+
+transmit the frame and implement the framebound
+
+check for the last ack received
+
+if ack received is not the same as windowSize, then send all the frame from last ack received
+
+repeat the process until all frames transmitted
+
+exit the program

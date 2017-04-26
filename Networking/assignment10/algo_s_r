@@ -1,0 +1,11 @@
+create a class named SelectiveRepeat
+
+enter total number of frames to send
+
+enter data for each frame
+
+send the frame and wait for the ack
+
+if any negative ack is received for any of the frames, resend that frame only
+
+exit from the program
