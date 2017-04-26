@@ -1,17 +1,16 @@
 set serveroutput on;
 
 declare
-	n number(2) := &n;
 	n_price author_006.price%type;
 	total_price author_006.price%type :=0;
 
-	cursor t_price is
+	cursor t_price (n number(2) := &n) is
 		select price from author_006;
 begin
 	open t_price;
 	for price in 1..n
 	loop
-	fetch t_price into n_price;
+		fetch t_price into n_price;
 		total_price := total_price + n_price;
 	end loop;
 	close t_price;
